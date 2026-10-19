@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Open Slot</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/app.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the page</a>
+<header>
+  <h1>Open Slot</h1>
+  <p class="lede">Find the musicians, comedians and podcasters whose audiences overlap your room's
+    regulars. The agent searches, plans and drafts. Only you confirm, assign and approve.</p>
+</header>
+<main id="main" tabindex="-1">
+  <noscript><p class="banner warn">This page needs JavaScript to run.</p></noscript>
+
+  <div class="banners">
+    <p id="banner-pending" class="banner pending" role="status">Checking which data this page uses.</p>
+    <p id="banner-synthetic" class="banner synthetic" role="status" hidden>Synthetic sample data. Qloo is not being called.<span id="banner-nokey" hidden> No Qloo key is set on this server.</span></p>
+    <p id="banner-live" class="banner live" role="status" hidden><strong>Live: Qloo is being called</strong> (key: <span id="key-status"></span>)</p>
+    <p id="banner-spent" class="banner spent" role="status" hidden><strong>Daily allowance spent: showing synthetic sample data</strong>. The server's live Qloo calls for today are used up, so a programme you start now runs on invented performers and Qloo is not called.</p>
+    <p id="banner-http" class="banner warn" role="alert" hidden>This page was loaded over plain HTTP, so your browser sends no label with its requests, and Confirm, Assign and Approve cannot work here. Open the HTTPS address.</p>
+    <p id="banner-nolabel" class="banner warn" role="alert" hidden>Your browser does not label requests, so you cannot confirm or approve here. Use a current Chrome, Firefox or Safari.</p>
+  </div>
+
+  <div class="notices">
+    <p id="problem" class="problem" role="alert" hidden></p>
+    <p id="status" class="status" role="status" aria-live="polite" tabindex="-1"></p>
+  </div>
+
+  <section id="room" aria-labelledby="room-title" hidden>
+    <h2 id="room-title">Your room</h2>
+    <form id="room-form" novalidate>
+      <label>Room name
+        <input id="label" name="label" maxlength="60" autocomplete="off" required>
+      </label>
+      <label>Open nights
+        <textarea id="nights" name="nights" rows="3" autocomplete="off" required></textarea>
+        <span class="hint">One per line, 1 to 6, such as Tue 3 Nov.</span>
+      </label>
+      <label>Acts that sold the room
+        <textarea id="acts" name="acts" rows="4" autocomplete="off" required></textarea>
+        <span class="hint">Type public performers, podcasts or shows only. Each name is sent to Qloo to find a match. One per line, 2 to 6.</span>
+      </label>
+      <label>Capacity note, optional
+        <input id="capacity" name="capacity" maxlength="40" autocomplete="off">
+        <span class="hint">Such as 300 seats. It appears in a drafted inquiry only if you give it.</span>
+      </label>
+      <div class="actions">
+        <button type="submit" id="open-button">Find matches for these acts</button>
+        <button type="button" id="sample-button" class="secondary" hidden>Try the sample programme</button>
+      </div>
+    </form>
+    <p class="note">This browser has a private workspace on this server, kept in its memory only. It is forgotten after two hours of inactivity, and sooner if the server restarts. A free host that sleeps restarts it: the first load then takes up to a minute and the workspace is empty, and the sample programme button starts again.</p>
+  </section>
+
+  <section id="programme" aria-labelledby="programme-title" hidden>
+    <h2 id="programme-title" tabindex="-1"></h2>
+    <p id="nights-line" class="note"></p>
+    <p id="data-line" class="note"></p>
+    <div class="actions">
+      <button type="button" id="new-button" class="secondary">Start a new programme</button>
+    </div>
+
+    <h2 id="acts-title">Confirm the acts</h2>
+    <p class="note">The agent finds the matches. Only you say which one is the act you mean.</p>
+    <ul id="anchors" class="anchors"></ul>
+
+    <h2 id="run-title">Run the agent</h2>
+    <div class="actions">
+      <button type="button" id="run-button">Run the agent</button>
+      <span id="run-note" class="note"></span>
+    </div>
+    <p id="budget-line" class="note"></p>
+    <p id="stop-line" class="note"></p>
+    <div id="cap-box" class="cap-box" hidden></div>
+
+    <details id="trace-details" class="trace-box" open>
+      <summary id="trace-summary">What the agent did</summary>
+      <ol id="trace" class="trace" aria-live="polite" aria-relevant="additions"></ol>
+    </details>
+
+    <div id="results" hidden>
+      <h2 id="cards-title">Candidates</h2>
+      <p id="range-line" class="note"></p>
+      <ol id="cards" class="cards"></ol>
+      <details id="also-details">
+        <summary id="also-summary"></summary>
+        <ul id="also" class="plain"></ul>
+      </details>
+      <details id="aside-details">
+        <summary id="aside-summary"></summary>
+        <ul id="aside" class="plain"></ul>
+      </details>
+
+      <h2 id="nights-title">Nights</h2>
+      <p class="note">The agent proposes which act could fit which night. A proposal is only a proposal: you assign a night. Nothing here books an act.</p>
+      <div class="actions">
+        <button type="button" id="propose-button">Propose nights</button>
+      </div>
+      <ol id="nights-board" class="nights"></ol>
+      <p id="backups-line" class="note"></p>
+
+      <h2 id="inquiries-title">Inquiries</h2>
+      <p id="inquiries-note" class="note">Use Draft inquiry on a candidate. A draft reads DRAFT until you name the sender and approve it. This app never sends anything: you copy the approved text or open it in your own mail app, and you find the address yourself, because Qloo holds no contact details.</p>
+      <ul id="inquiries" class="inquiries"></ul>
+    </div>
+  </section>
+
+  <details id="console-details" class="console" hidden>
+    <summary>Agent console</summary>
+    <p>Run any tool as the agent, the way a connected agent would. A person's verbs are not tools, so asking for one here is refused.</p>
+    <form id="console-form" novalidate>
+      <label>Tool
+        <input id="console-tool" list="console-tools" autocomplete="off" spellcheck="false">
+      </label>
+      <datalist id="console-tools"></datalist>
+      <label>Arguments, as JSON
+        <textarea id="console-args" rows="4" autocomplete="off" spellcheck="false">{}</textarea>
+      </label>
+      <div class="actions">
+        <button type="submit" id="console-run">Run as the agent</button>
+        <button type="button" id="console-try" class="secondary">Try approve_inquiry as the agent</button>
+      </div>
+    </form>
+    <p id="console-line" class="console-line" aria-live="polite"></p>
+    <pre id="console-out" class="console-out" tabindex="0" aria-label="Result of the last call"></pre>
+  </details>
+
+  <details id="agent-details" hidden>
+    <summary>Connect your own agent</summary>
+    <p>This address reaches only this workspace and always acts as the agent. Anyone who holds it can run the agent's tools here, so keep it private.</p>
+    <p>Address: <code id="agent-address"></code></p>
+    <p>With Claude Code: <code id="agent-command"></code></p>
+  </details>
+</main>
+<footer>
+  <p>Open Slot is an independent entry to the Qloo Agentic Hackathon and is not affiliated with or endorsed by Qloo. Qloo's figures describe how audiences overlap; they are not an assessment of any performer. This app never contacts anyone.</p>
+</footer>
+</body>
+</html>

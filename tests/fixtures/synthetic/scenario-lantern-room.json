@@ -1,0 +1,466 @@
+{
+  "synthetic": "Invented performers and ids in the reserved range 00000000-0000-4000-8000-...; shaped like Qloo's documented examples; not Qloo data.",
+  "entities": [
+    {"entity_id": "00000000-0000-4000-8000-00000000a001", "name": "Birchwater Duo", "type": "urn:entity:artist", "popularity": 0.62, "disambiguation": "synthetic sample: stands in for the name you typed"},
+    {"entity_id": "00000000-0000-4000-8000-00000000a002", "name": "Cinderfield Radio", "type": "urn:entity:artist", "popularity": 0.71, "disambiguation": "synthetic sample: stands in for the name you typed"},
+    {"entity_id": "00000000-0000-4000-8000-00000000a003", "name": "Odalys Fennimore", "type": "urn:entity:person", "popularity": 0.55, "disambiguation": "synthetic sample: stands in for the name you typed"},
+    {"entity_id": "00000000-0000-4000-8000-00000000a004", "name": "The Aldermoor Hour", "type": "urn:entity:podcast", "popularity": 0.68, "disambiguation": "synthetic sample: stands in for the name you typed"},
+    {"entity_id": "00000000-0000-4000-8000-00000000a0f1", "name": "Birchwater Duo Tribute Act", "type": "urn:entity:artist", "popularity": 0.12, "disambiguation": "synthetic sample: a look-alike name"}
+  ],
+  "search": {
+    "the milk carton kids": [
+      "00000000-0000-4000-8000-00000000a001",
+      "00000000-0000-4000-8000-00000000a0f1"
+    ],
+    "alvvays": [
+      "00000000-0000-4000-8000-00000000a002"
+    ],
+    "maria bamford": [
+      "00000000-0000-4000-8000-00000000a003"
+    ],
+    "judge john hodgman": [
+      "00000000-0000-4000-8000-00000000a004"
+    ],
+    "birchwater duo": [
+      "00000000-0000-4000-8000-00000000a001",
+      "00000000-0000-4000-8000-00000000a0f1"
+    ]
+  },
+  "tags": [
+    {"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"},
+    {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}
+  ],
+  "pools": {
+    "urn:entity:artist": [
+      {"entity_id": "00000000-0000-4000-8000-00000000b001", "name": "Marrowbrook Quartet", "type": "urn:entity:artist", "popularity": 0.88, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.41, "00000000-0000-4000-8000-00000000a002": 0.37, "00000000-0000-4000-8000-00000000a004": 0.12}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b002", "name": "Lindenwick Trio", "type": "urn:entity:artist", "popularity": 0.6, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.52, "00000000-0000-4000-8000-00000000a002": 0.33, "00000000-0000-4000-8000-00000000a003": 0.15}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b003", "name": "Fennimore Hollow", "type": "urn:entity:artist", "popularity": 0.91, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.3, "00000000-0000-4000-8000-00000000a002": 0.22}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b004", "name": "Galloway Sparrows", "type": "urn:entity:artist", "popularity": 0.64, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a002": 0.45}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b005", "name": "Hollowmere Radio", "type": "urn:entity:artist", "popularity": 0.69, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.28, "00000000-0000-4000-8000-00000000a002": 0.26, "00000000-0000-4000-8000-00000000a004": 0.18, "00000000-0000-4000-8000-00000000a003": 0.11}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b006", "name": "Eastwick Ferry Band", "type": "urn:entity:artist", "popularity": 0.95, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a002": 0.5}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b007", "name": "Dunmarrow Collective", "type": "urn:entity:artist", "popularity": 0.47, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.36}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b008", "name": "Quillfeather", "type": "urn:entity:artist", "popularity": 0.5, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.05, "00000000-0000-4000-8000-00000000a002": 0.09}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b009", "name": "Pennywhistle Court", "type": "urn:entity:artist", "popularity": 0.79, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.31, "00000000-0000-4000-8000-00000000a002": 0.3}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b00a", "name": "Alderfield Union", "type": "urn:entity:artist", "popularity": 0.72, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a002": 0.33, "00000000-0000-4000-8000-00000000a003": 0.27, "00000000-0000-4000-8000-00000000a001": 0.1}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b00b", "name": "Brindle & Thorne", "type": "urn:entity:artist", "popularity": 0.53, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a004": 0.21}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b00c", "name": "Ashgrove Parade", "type": "urn:entity:artist", "popularity": 0.84, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.19, "00000000-0000-4000-8000-00000000a002": 0.15}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b00d", "name": "Tamsin Wick", "type": "urn:entity:artist", "popularity": 0.43, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.24, "00000000-0000-4000-8000-00000000a002": 0.19}},
+      {"entity_id": "00000000-0000-4000-8000-00000000b00e", "name": "Copperfield Pines", "type": "urn:entity:artist", "popularity": 0.6, "tags": [{"id": "urn:tag:synthetic:indie", "name": "Indie (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.12}},
+      {"entity_id": "00000000-0000-4000-8000-00000000a001", "name": "Birchwater Duo", "type": "urn:entity:artist", "popularity": 0.62, "tags": [{"id": "urn:tag:synthetic:folk", "name": "Folk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {}}
+    ],
+    "urn:entity:podcast": [
+      {"entity_id": "00000000-0000-4000-8000-00000000c001", "name": "Wickham Late Show", "type": "urn:entity:podcast", "popularity": 0.9, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a004": 0.5, "00000000-0000-4000-8000-00000000a003": 0.3}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c002", "name": "The Gallowglass Hour", "type": "urn:entity:podcast", "popularity": 0.66, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": 0.06, "links": {"00000000-0000-4000-8000-00000000a004": 0.44, "00000000-0000-4000-8000-00000000a003": 0.31, "00000000-0000-4000-8000-00000000a001": 0.15}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c003", "name": "Tinderbox Tuesdays", "type": "urn:entity:podcast", "popularity": 0.52, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a004": 0.22, "00000000-0000-4000-8000-00000000a002": 0.14}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c004", "name": "Harrowgate Radio Hour", "type": "urn:entity:podcast", "popularity": 0.81, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a004": 0.4, "00000000-0000-4000-8000-00000000a002": 0.2}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c005", "name": "Beeswax & Biscuits", "type": "urn:entity:podcast", "popularity": 0.45, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.16}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c006", "name": "The Fennimore Files", "type": "urn:entity:podcast", "popularity": 0.61, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a004": 0.35, "00000000-0000-4000-8000-00000000a003": 0.2}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c007", "name": "Larkspur Lab", "type": "urn:entity:podcast", "popularity": 0.93, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a004": 0.29, "00000000-0000-4000-8000-00000000a001": 0.21}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c008", "name": "Oldgate Open Mic", "type": "urn:entity:podcast", "popularity": 0.57, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a002": 0.13}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c009", "name": "Thistledown Talks", "type": "urn:entity:podcast", "popularity": 0.55, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.08, "00000000-0000-4000-8000-00000000a004": 0.09}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c00a", "name": "Cobbleford Confidential", "type": "urn:entity:podcast", "popularity": 0.49, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a004": 0.27, "00000000-0000-4000-8000-00000000a003": 0.18, "00000000-0000-4000-8000-00000000a002": 0.11}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c00b", "name": "Marlow Hour", "type": "urn:entity:podcast", "popularity": 0.78, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a004": 0.25, "00000000-0000-4000-8000-00000000a001": 0.14}},
+      {"entity_id": "00000000-0000-4000-8000-00000000c00c", "name": "Sedgemoor Stories", "type": "urn:entity:podcast", "popularity": 0.59, "tags": [{"id": "urn:tag:synthetic:talk", "name": "Talk (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.11}}
+    ],
+    "urn:entity:person": [
+      {"entity_id": "00000000-0000-4000-8000-00000000d001", "name": "Ferris Quillon", "type": "urn:entity:person", "popularity": 0.86, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.48, "00000000-0000-4000-8000-00000000a004": 0.2}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d002", "name": "Odile Thackeray", "type": "urn:entity:person", "popularity": 0.6, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": 0.09, "links": {"00000000-0000-4000-8000-00000000a003": 0.51, "00000000-0000-4000-8000-00000000a004": 0.3, "00000000-0000-4000-8000-00000000a002": 0.14}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d003", "name": "Rufus Pembrook-Hale", "type": "urn:entity:person", "popularity": 0.54, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.33}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d004", "name": "Ingrid Vandermeer", "type": "urn:entity:person", "popularity": 0.77, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.4, "00000000-0000-4000-8000-00000000a001": 0.12}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d005", "name": "Cormac Ellery", "type": "urn:entity:person", "popularity": 0.48, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.29, "00000000-0000-4000-8000-00000000a004": 0.17}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d006", "name": "Saoirse Windle", "type": "urn:entity:person", "popularity": 0.62, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a004": 0.12}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d007", "name": "Tobias Marchetti", "type": "urn:entity:person", "popularity": 0.94, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.3, "00000000-0000-4000-8000-00000000a002": 0.22}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d008", "name": "Wilhelmina Rook", "type": "urn:entity:person", "popularity": 0.41, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.23, "00000000-0000-4000-8000-00000000a001": 0.19, "00000000-0000-4000-8000-00000000a004": 0.15}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d009", "name": "Barnaby Quist", "type": "urn:entity:person", "popularity": 0.57, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a002": 0.07}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d00a", "name": "Philippa Ashdown", "type": "urn:entity:person", "popularity": 0.66, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a003": 0.26, "00000000-0000-4000-8000-00000000a002": 0.21}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d00b", "name": "Nessa Calloway", "type": "urn:entity:person", "popularity": 0.52, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {"00000000-0000-4000-8000-00000000a001": 0.1}},
+      {"entity_id": "00000000-0000-4000-8000-00000000d00c", "name": "Leopold Fitch", "type": "urn:entity:person", "popularity": 0.45, "tags": [{"id": "urn:tag:synthetic:stand-up", "name": "Stand-Up (synthetic)", "type": "urn:tag:synthetic:genre"}, {"id": "urn:tag:synthetic:comedian", "name": "Comedian (synthetic)", "type": "urn:tag:synthetic:genre"}], "growth": null, "links": {}}
+    ]
+  },
+  "trends": {
+    "00000000-0000-4000-8000-00000000b001": [
+      {"date": "2026-10-12", "population_percentile": 88.0, "population_rank": 144, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 87.8, "population_rank": 146, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 87.9, "population_rank": 145, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 87.8, "population_rank": 146, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 88.0, "population_rank": 144, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 87.9, "population_rank": 145, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 88.1, "population_rank": 143, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 88.0, "population_rank": 144, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b002": [
+      {"date": "2026-10-12", "population_percentile": 60.0, "population_rank": 480, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-10-05", "population_percentile": 58.8, "population_rank": 494, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-28", "population_percentile": 57.6, "population_rank": 509, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-21", "population_percentile": 56.4, "population_rank": 523, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-14", "population_percentile": 55.2, "population_rank": 538, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-07", "population_percentile": 54.0, "population_rank": 552, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-31", "population_percentile": 52.8, "population_rank": 566, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-24", "population_percentile": 51.6, "population_rank": 581, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b003": [
+      {"date": "2026-10-12", "population_percentile": 91.0, "population_rank": 108, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 90.8, "population_rank": 110, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 90.9, "population_rank": 109, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 90.8, "population_rank": 110, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 91.0, "population_rank": 108, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 90.9, "population_rank": 109, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 91.1, "population_rank": 107, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 91.0, "population_rank": 108, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b004": [
+      {"date": "2026-10-12", "population_percentile": 64.0, "population_rank": 432, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 63.8, "population_rank": 434, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 63.9, "population_rank": 433, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 63.8, "population_rank": 434, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 64.0, "population_rank": 432, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 63.9, "population_rank": 433, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 64.1, "population_rank": 431, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 64.0, "population_rank": 432, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b005": [
+      {"date": "2026-10-12", "population_percentile": 69.0, "population_rank": 372, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-10-05", "population_percentile": 67.8, "population_rank": 386, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-28", "population_percentile": 66.6, "population_rank": 401, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-21", "population_percentile": 65.4, "population_rank": 415, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-14", "population_percentile": 64.2, "population_rank": 430, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-07", "population_percentile": 63.0, "population_rank": 444, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-31", "population_percentile": 61.8, "population_rank": 458, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-24", "population_percentile": 60.6, "population_rank": 473, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b006": [
+      {"date": "2026-10-12", "population_percentile": 95.0, "population_rank": 60, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 94.8, "population_rank": 62, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 94.9, "population_rank": 61, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 94.8, "population_rank": 62, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 95.0, "population_rank": 60, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 94.9, "population_rank": 61, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 95.1, "population_rank": 59, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 95.0, "population_rank": 60, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b007": [
+      {"date": "2026-10-12", "population_percentile": 47.0, "population_rank": 636, "population_rank_velocity": 12, "velocity_fold_change": 1.01, "population_percent_delta": 1.0},
+      {"date": "2026-10-05", "population_percentile": 46.0, "population_rank": 648, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b008": [
+      {"date": "2026-10-12", "population_percentile": 50.0, "population_rank": 600, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 49.8, "population_rank": 602, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 49.9, "population_rank": 601, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 49.8, "population_rank": 602, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 50.0, "population_rank": 600, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 49.9, "population_rank": 601, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 50.1, "population_rank": 599, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 50.0, "population_rank": 600, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b009": [
+      {"date": "2026-10-12", "population_percentile": 79.0, "population_rank": 252, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-10-05", "population_percentile": 77.8, "population_rank": 266, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-28", "population_percentile": 76.6, "population_rank": 281, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-21", "population_percentile": 75.4, "population_rank": 295, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-14", "population_percentile": 74.2, "population_rank": 310, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-07", "population_percentile": 73.0, "population_rank": 324, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-31", "population_percentile": 71.8, "population_rank": 338, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-24", "population_percentile": 70.6, "population_rank": 353, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b00a": [
+      {"date": "2026-10-12", "population_percentile": 72.0, "population_rank": 336, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-10-05", "population_percentile": 73.1, "population_rank": 323, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-09-28", "population_percentile": 74.2, "population_rank": 310, "population_rank_velocity": -14, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-09-21", "population_percentile": 75.3, "population_rank": 296, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-09-14", "population_percentile": 76.4, "population_rank": 283, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-09-07", "population_percentile": 77.5, "population_rank": 270, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-08-31", "population_percentile": 78.6, "population_rank": 257, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-08-24", "population_percentile": 79.7, "population_rank": 244, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b00b": [
+      {"date": "2026-10-12", "population_percentile": 53.0, "population_rank": 564, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 52.8, "population_rank": 566, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 52.9, "population_rank": 565, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 52.8, "population_rank": 566, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 53.0, "population_rank": 564, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 52.9, "population_rank": 565, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 53.1, "population_rank": 563, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 53.0, "population_rank": 564, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b00c": [
+      {"date": "2026-10-12", "population_percentile": 84.0, "population_rank": 192, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 83.8, "population_rank": 194, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 83.9, "population_rank": 193, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 83.8, "population_rank": 194, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 84.0, "population_rank": 192, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 83.9, "population_rank": 193, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 84.1, "population_rank": 191, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 84.0, "population_rank": 192, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b00d": [
+      {"date": "2026-10-12", "population_percentile": 43.0, "population_rank": 684, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-10-05", "population_percentile": 41.8, "population_rank": 698, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-28", "population_percentile": 40.6, "population_rank": 713, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-21", "population_percentile": 39.4, "population_rank": 727, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-14", "population_percentile": 38.2, "population_rank": 742, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-07", "population_percentile": 37.0, "population_rank": 756, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-31", "population_percentile": 35.8, "population_rank": 770, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-24", "population_percentile": 34.6, "population_rank": 785, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000b00e": [
+      {"date": "2026-10-12", "population_percentile": 60.0, "population_rank": 480, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 59.8, "population_rank": 482, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 59.9, "population_rank": 481, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 59.8, "population_rank": 482, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 60.0, "population_rank": 480, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 59.9, "population_rank": 481, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 60.1, "population_rank": 479, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 60.0, "population_rank": 480, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000a001": [
+      {"date": "2026-10-12", "population_percentile": 62.0, "population_rank": 456, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 61.8, "population_rank": 458, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 61.9, "population_rank": 457, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 61.8, "population_rank": 458, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 62.0, "population_rank": 456, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 61.9, "population_rank": 457, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 62.1, "population_rank": 455, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 62.0, "population_rank": 456, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c001": [
+      {"date": "2026-10-12", "population_percentile": 90.0, "population_rank": 120, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 89.8, "population_rank": 122, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 89.9, "population_rank": 121, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 89.8, "population_rank": 122, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 90.0, "population_rank": 120, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 89.9, "population_rank": 121, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 90.1, "population_rank": 119, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 90.0, "population_rank": 120, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c002": [
+      {"date": "2026-10-12", "population_percentile": 66.0, "population_rank": 408, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 65.8, "population_rank": 410, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 65.9, "population_rank": 409, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 65.8, "population_rank": 410, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 66.0, "population_rank": 408, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 65.9, "population_rank": 409, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 66.1, "population_rank": 407, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 66.0, "population_rank": 408, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c003": [
+      {"date": "2026-10-12", "population_percentile": 52.0, "population_rank": 576, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 51.8, "population_rank": 578, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 51.9, "population_rank": 577, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 51.8, "population_rank": 578, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 52.0, "population_rank": 576, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 51.9, "population_rank": 577, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 52.1, "population_rank": 575, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 52.0, "population_rank": 576, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c004": [
+      {"date": "2026-10-12", "population_percentile": 81.0, "population_rank": 228, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 80.8, "population_rank": 230, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 80.9, "population_rank": 229, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 80.8, "population_rank": 230, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 81.0, "population_rank": 228, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 80.9, "population_rank": 229, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 81.1, "population_rank": 227, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 81.0, "population_rank": 228, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c005": [
+      {"date": "2026-10-12", "population_percentile": 45.0, "population_rank": 660, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 44.8, "population_rank": 662, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 44.9, "population_rank": 661, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 44.8, "population_rank": 662, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 45.0, "population_rank": 660, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 44.9, "population_rank": 661, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 45.1, "population_rank": 659, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 45.0, "population_rank": 660, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c006": [
+      {"date": "2026-10-12", "population_percentile": 61.0, "population_rank": 468, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-10-05", "population_percentile": 62.1, "population_rank": 455, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-09-28", "population_percentile": 63.2, "population_rank": 442, "population_rank_velocity": -14, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-09-21", "population_percentile": 64.3, "population_rank": 428, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-09-14", "population_percentile": 65.4, "population_rank": 415, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-09-07", "population_percentile": 66.5, "population_rank": 402, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-08-31", "population_percentile": 67.6, "population_rank": 389, "population_rank_velocity": -13, "velocity_fold_change": 0.989, "population_percent_delta": -1.1},
+      {"date": "2026-08-24", "population_percentile": 68.7, "population_rank": 376, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c007": [
+      {"date": "2026-10-12", "population_percentile": 93.0, "population_rank": 84, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 92.8, "population_rank": 86, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 92.9, "population_rank": 85, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 92.8, "population_rank": 86, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 93.0, "population_rank": 84, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 92.9, "population_rank": 85, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 93.1, "population_rank": 83, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 93.0, "population_rank": 84, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c008": [
+      {"date": "2026-10-12", "population_percentile": 57.0, "population_rank": 516, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 56.8, "population_rank": 518, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 56.9, "population_rank": 517, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 56.8, "population_rank": 518, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 57.0, "population_rank": 516, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 56.9, "population_rank": 517, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 57.1, "population_rank": 515, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 57.0, "population_rank": 516, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c009": [
+      {"date": "2026-10-12", "population_percentile": 55.0, "population_rank": 540, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 54.8, "population_rank": 542, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 54.9, "population_rank": 541, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 54.8, "population_rank": 542, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 55.0, "population_rank": 540, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 54.9, "population_rank": 541, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 55.1, "population_rank": 539, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 55.0, "population_rank": 540, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c00a": [
+      {"date": "2026-10-12", "population_percentile": 49.0, "population_rank": 612, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 48.8, "population_rank": 614, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 48.9, "population_rank": 613, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 48.8, "population_rank": 614, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 49.0, "population_rank": 612, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 48.9, "population_rank": 613, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 49.1, "population_rank": 611, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 49.0, "population_rank": 612, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c00b": [
+      {"date": "2026-10-12", "population_percentile": 78.0, "population_rank": 264, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 77.8, "population_rank": 266, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 77.9, "population_rank": 265, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 77.8, "population_rank": 266, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 78.0, "population_rank": 264, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 77.9, "population_rank": 265, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 78.1, "population_rank": 263, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 78.0, "population_rank": 264, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000c00c": [
+      {"date": "2026-10-12", "population_percentile": 59.0, "population_rank": 492, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 58.8, "population_rank": 494, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 58.9, "population_rank": 493, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 58.8, "population_rank": 494, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 59.0, "population_rank": 492, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 58.9, "population_rank": 493, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 59.1, "population_rank": 491, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 59.0, "population_rank": 492, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d001": [
+      {"date": "2026-10-12", "population_percentile": 86.0, "population_rank": 168, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 85.8, "population_rank": 170, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 85.9, "population_rank": 169, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 85.8, "population_rank": 170, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 86.0, "population_rank": 168, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 85.9, "population_rank": 169, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 86.1, "population_rank": 167, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 86.0, "population_rank": 168, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d002": [
+      {"date": "2026-10-12", "population_percentile": 60.0, "population_rank": 480, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-10-05", "population_percentile": 58.8, "population_rank": 494, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-28", "population_percentile": 57.6, "population_rank": 509, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-21", "population_percentile": 56.4, "population_rank": 523, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-14", "population_percentile": 55.2, "population_rank": 538, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-07", "population_percentile": 54.0, "population_rank": 552, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-31", "population_percentile": 52.8, "population_rank": 566, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-24", "population_percentile": 51.6, "population_rank": 581, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d003": [
+      {"date": "2026-10-12", "population_percentile": 54.0, "population_rank": 552, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 53.8, "population_rank": 554, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 53.9, "population_rank": 553, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 53.8, "population_rank": 554, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 54.0, "population_rank": 552, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 53.9, "population_rank": 553, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 54.1, "population_rank": 551, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 54.0, "population_rank": 552, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d004": [
+      {"date": "2026-10-12", "population_percentile": 77.0, "population_rank": 276, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-10-05", "population_percentile": 75.8, "population_rank": 290, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-28", "population_percentile": 74.6, "population_rank": 305, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-21", "population_percentile": 73.4, "population_rank": 319, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-14", "population_percentile": 72.2, "population_rank": 334, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-07", "population_percentile": 71.0, "population_rank": 348, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-31", "population_percentile": 69.8, "population_rank": 362, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-24", "population_percentile": 68.6, "population_rank": 377, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d005": [
+      {"date": "2026-10-12", "population_percentile": 48.0, "population_rank": 624, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 47.8, "population_rank": 626, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 47.9, "population_rank": 625, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 47.8, "population_rank": 626, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 48.0, "population_rank": 624, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 47.9, "population_rank": 625, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 48.1, "population_rank": 623, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 48.0, "population_rank": 624, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d006": [
+      {"date": "2026-10-12", "population_percentile": 62.0, "population_rank": 456, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 61.8, "population_rank": 458, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 61.9, "population_rank": 457, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 61.8, "population_rank": 458, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 62.0, "population_rank": 456, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 61.9, "population_rank": 457, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 62.1, "population_rank": 455, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 62.0, "population_rank": 456, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d007": [
+      {"date": "2026-10-12", "population_percentile": 94.0, "population_rank": 72, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 93.8, "population_rank": 74, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 93.9, "population_rank": 73, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 93.8, "population_rank": 74, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 94.0, "population_rank": 72, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 93.9, "population_rank": 73, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 94.1, "population_rank": 71, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 94.0, "population_rank": 72, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d008": [
+      {"date": "2026-10-12", "population_percentile": 41.0, "population_rank": 708, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-10-05", "population_percentile": 39.8, "population_rank": 722, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-28", "population_percentile": 38.6, "population_rank": 737, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-21", "population_percentile": 37.4, "population_rank": 751, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-14", "population_percentile": 36.2, "population_rank": 766, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-07", "population_percentile": 35.0, "population_rank": 780, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-31", "population_percentile": 33.8, "population_rank": 794, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-24", "population_percentile": 32.6, "population_rank": 809, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d009": [
+      {"date": "2026-10-12", "population_percentile": 57.0, "population_rank": 516, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 56.8, "population_rank": 518, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 56.9, "population_rank": 517, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 56.8, "population_rank": 518, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 57.0, "population_rank": 516, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 56.9, "population_rank": 517, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 57.1, "population_rank": 515, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 57.0, "population_rank": 516, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d00a": [
+      {"date": "2026-10-12", "population_percentile": 66.0, "population_rank": 408, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-10-05", "population_percentile": 64.8, "population_rank": 422, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-28", "population_percentile": 63.6, "population_rank": 437, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-21", "population_percentile": 62.4, "population_rank": 451, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-14", "population_percentile": 61.2, "population_rank": 466, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-09-07", "population_percentile": 60.0, "population_rank": 480, "population_rank_velocity": 14, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-31", "population_percentile": 58.8, "population_rank": 494, "population_rank_velocity": 15, "velocity_fold_change": 1.012, "population_percent_delta": 1.2},
+      {"date": "2026-08-24", "population_percentile": 57.6, "population_rank": 509, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d00b": [
+      {"date": "2026-10-12", "population_percentile": 52.0, "population_rank": 576, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 51.8, "population_rank": 578, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 51.9, "population_rank": 577, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 51.8, "population_rank": 578, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 52.0, "population_rank": 576, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 51.9, "population_rank": 577, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 52.1, "population_rank": 575, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 52.0, "population_rank": 576, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ],
+    "00000000-0000-4000-8000-00000000d00c": [
+      {"date": "2026-10-12", "population_percentile": 45.0, "population_rank": 660, "population_rank_velocity": 2, "velocity_fold_change": 1.002, "population_percent_delta": 0.2},
+      {"date": "2026-10-05", "population_percentile": 44.8, "population_rank": 662, "population_rank_velocity": -1, "velocity_fold_change": 0.999, "population_percent_delta": -0.1},
+      {"date": "2026-09-28", "population_percentile": 44.9, "population_rank": 661, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-21", "population_percentile": 44.8, "population_rank": 662, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-09-14", "population_percentile": 45.0, "population_rank": 660, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-09-07", "population_percentile": 44.9, "population_rank": 661, "population_rank_velocity": -2, "velocity_fold_change": 0.998, "population_percent_delta": -0.2},
+      {"date": "2026-08-31", "population_percentile": 45.1, "population_rank": 659, "population_rank_velocity": 1, "velocity_fold_change": 1.001, "population_percent_delta": 0.1},
+      {"date": "2026-08-24", "population_percentile": 45.0, "population_rank": 660, "population_rank_velocity": 0, "velocity_fold_change": 1.0, "population_percent_delta": 0.0}
+    ]
+  }
+}

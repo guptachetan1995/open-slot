@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "results": {
+    "entities": [
+      {
+        "entity_id": "00000000-0000-4000-8000-000000000201",
+        "name": "Cinderfield Radio",
+        "type": "urn:entity:artist",
+        "subtype": "urn:entity:artist",
+        "popularity": 0.58,
+        "disambiguation": "synthetic indie band",
+        "tags": [
+          {"id": "urn:tag:synthetic:indie", "name": "Indie", "type": "urn:tag:synthetic:genre"}
+        ],
+        "properties": {"description": "Invented for the tests.", "websites": []},
+        "external": {},
+        "query": {
+          "measurements": {"audience_growth": 0.04},
+          "explainability": {
+            "signal.interests.entities": [
+              {"entity_id": "00000000-0000-4000-8000-000000000101", "name": "Birchwater Duo", "score": 0.34},
+              {"entity_id": "00000000-0000-4000-8000-000000000103", "name": "Marrowbrook Quartet", "score": 0.1},
+              {"entity_id": "00000000-0000-4000-8000-000000000104", "name": "Lindenwick Trio", "score": 0.05}
+            ]
+          }
+        }
+      },
+      {
+        "entity_id": "00000000-0000-4000-8000-000000000202",
+        "name": "Dunmarrow Collective",
+        "type": "urn:entity:artist"
+      }
+    ]
+  }
+}

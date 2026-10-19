@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "results": {
+    "tags": [
+      {
+        "tag_id": "urn:tag:synthetic:stand-up",
+        "name": "Stand-Up (synthetic)",
+        "types": ["urn:tag:synthetic:genre"],
+        "subtype": "urn:tag:synthetic"
+      }
+    ]
+  }
+}

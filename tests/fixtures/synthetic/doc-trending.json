@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "results": {
+    "trends": [
+      {"date": "2026-10-12", "population_percentile": 71.4, "population_rank": 120,
+       "population_rank_velocity": 5, "velocity_fold_change": 1.02, "population_percent_delta": 0.3},
+      {"date": "2026-10-05", "population_percentile": 70.1, "population_rank": 131,
+       "population_rank_velocity": 4, "velocity_fold_change": 1.01, "population_percent_delta": 0.2},
+      {"date": "2026-09-28", "population_percentile": 68.9, "population_rank": 143,
+       "population_rank_velocity": 3, "velocity_fold_change": 1.01, "population_percent_delta": 0.1}
+    ]
+  }
+}

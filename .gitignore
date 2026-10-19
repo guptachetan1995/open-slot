@@ -1,0 +1,15 @@
+# The Qloo key lives in .env (or a key file outside the repository). Never commit either.
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Private server-side cache of Qloo responses, call ledgers and demo recording output.
+# Qloo's developer guide forbids storing Qloo response data in a public repository.
+.cache/
+out/
+.DS_Store

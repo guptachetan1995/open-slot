@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "results": [
+    {
+      "entity_id": "00000000-0000-4000-8000-000000000101",
+      "name": "Birchwater Duo",
+      "type": "urn:entity:artist",
+      "popularity": 0.62,
+      "disambiguation": "synthetic folk duo",
+      "properties": {"description": "Invented for the tests."}
+    },
+    {
+      "entity_id": "00000000-0000-4000-8000-000000000102",
+      "name": "Birchwater Duo Tribute",
+      "type": "urn:entity:artist"
+    }
+  ]
+}
