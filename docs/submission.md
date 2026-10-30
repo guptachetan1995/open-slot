@@ -1,24 +1,22 @@
 # Devpost submission copy — Open Slot
 
 **Hackathon:** [Qloo Agentic Hackathon](https://qloo.devpost.com/) ("Agents, but with taste") ·
-**Deadline:** Oct 30, 2026, 11:45 pm EDT (Sat 31 Oct, 09:15 IST). **Target:** submitted by Wed 28
-Oct, 2026.
+**Deadline:** Oct 30, 2026, 11:45 pm EDT (Sat 31 Oct, 09:15 IST).
 
-**State: version 2, written 20 Oct 2026 after the app, the stdio relay and the deploy files were built
-and tested on synthetic data. Not yet true, and so still conditional below: any live Qloo data, the
-hosted address, a session with a real MCP client, the recorded session and the video.**
+**State: version 3, revised 30 Oct 2026 after an independent review against the judging criteria.
+The app runs on its labelled synthetic sample data: the Qloo API key requested on 17 Oct had not
+reached this build when it was published. No real MCP client session has been recorded.**
 
 - This file is the copy for each field of the Devpost "Enter a Submission" form, then the
   checklist those fields answer and the split of who does what.
 - Every sentence that describes behaviour is a claim the build must satisfy. A feature that is cut
   loses its sentences here, in the README and in the saved draft in the same change.
-- Where a value can only exist later (a URL, a measured number), the field says **pending** and
-  names what fills it.
+- A value that exists only once the demo is hosted (its address, the host's name) is an HTML
+  comment naming what fills it, and is filled before the copy is pasted.
 - The form's exact field list is read on the live form once the project is registered, and this
   file is updated to match. The fields below are Devpost's standard ones plus what the Official
   Rules require.
-- Every link in this file is absolute, because Devpost can't follow a relative link. A URL that
-  does not exist yet is written as plain text until it does.
+- Every link in this file is absolute, because Devpost can't follow a relative link.
 - The hackathon asks for a hosted demo, a public repository and a text description. It does not
   ask for a video.
 
@@ -37,8 +35,13 @@ At most 200 characters. This one is 199:
 The rules require that the text description "explain the features and functionality of your
 Project", and the overview adds "what makes it 'Qloo-powered.'"
 
-**Try it first:** the hosted demo (pending: the address lands after the deploy sitting on 23 Oct).
+**Try it first:** <!-- hosted-url -->
 Click **Try the sample programme**, confirm the acts, click **Run the agent**, then open any card.
+
+The sample room has three dark Tuesdays and four acts that sold it: The Milk Carton Kids, Alvvays,
+Maria Bamford and Judge John Hodgman. The agent proposes a music act, a comedian and a podcast for
+those nights. The demo runs on labelled synthetic data, so the candidates are invented; the
+planner, cards and gate are the code a key would run on Qloo's answers.
 
 ### Inspiration
 
@@ -57,9 +60,6 @@ The other half is what an agent should be allowed to do. An inquiry to an act's 
 message sent in the room's name. It can't be unsent, and a careless one costs a relationship the
 room needs. So Open Slot drafts everything and sends nothing, and the three decisions that matter
 are not things an agent has a tool for.
-
-*Pending (researched 19 to 27 Oct): at most one cited public figure on independent-venue
-booking, from a primary source. If none is found, no number is used.*
 
 ### What it does
 
@@ -95,16 +95,25 @@ and raising the call cap are human-only verbs. They are never registered as tool
 can call them, whether it is the page's own agent console or a model-driven agent over MCP. No act
 is ever shown as booked.
 
+**What bookers use today**, by their makers' own pages:
+[Opendate's Smart Suggestions](https://www.opendate.io/post/artist-discovery-smart-suggestions)
+ranks "artists who've drawn well at venues comparable to yours";
+[Chartmetric's Neighbor Artists](https://hmc.chartmetric.com/new-features-cities-page-neighbor-artists-instagram-follower-demographics-amazon-music/)
+lists artists with similar Spotify or Deezer numbers; [Booking-Agent.io](https://booking-agent.io/)
+helps artists and their agents find venues. All three describe artists; none describes finding a
+comedian or a podcast whose audience overlaps a band's. Open Slot asks that cross-domain question,
+adds reach and trend, and labels whose figure each number is. It has no draw history, the better
+evidence of what a night takes at the door.
+
 ### How we built it
 
-No language model is bundled, and that is deliberate. The agent is a planner whose every step is
-a rule applied to a Qloo response, and the rules are in the README. The same ten-tool registry is
-served over the Model Context Protocol, so any tool-calling model can drive it, and none can
-commit: one endpoint at the agent address speaks the stateless 2026-07-28 revision and the
-2025-11-25 and 2025-06-18 `initialize` handshake, and `python3 -m open_slot mcp --address ...`
-relays the same address to a client that only speaks stdio. A recorded session of Claude
-(Anthropic), run in Claude Code, shows that (pending; it holds Qloo data, so it stays out of the
-repository).
+No language model is bundled, and that is deliberate. The agent is an auditable planner whose
+every step is a rule applied to a Qloo response, and the rules are in the README. The same ten-tool
+registry is served over the Model Context Protocol, so any tool-calling model can drive it, and
+none can commit through it: one endpoint at the agent address speaks the stateless 2026-07-28
+revision and the 2025-11-25 and 2025-06-18 `initialize` handshake, and
+`python3 -m open_slot mcp --address ...` relays the same address to a client that only speaks
+stdio.
 
 Qloo is called through four endpoints, each for a different question: `/search` (turn a name into
 an entity you confirm), `/v2/insights` (one call per kind of act, with Qloo's explainability, the
@@ -126,57 +135,49 @@ as "stand-up", and the app refuses any other. No Qloo response is stored in the 
 Everything goes through one `invoke(tool, args, actor)` chokepoint that the page's buttons, the
 command line, the agent console and the MCP front end all call. It is plain Python 3.11 or newer
 with no dependency and no build step: about 4,200 lines in 19 modules, a page of about 1,500 lines
-of HTML, CSS and JavaScript, and 675 tests that run offline in a few seconds. It is meant to be
-hosted on a free web service (HTTPS is required, because a browser labels a person's click only
-on HTTPS pages) so that a judge can try it without installing anything; the hosted address is
-pending.
-The public repository holds no Qloo response data, because Qloo's developer guide says not to
-store it in a public repository: its tests and its keyless mode use synthetic, invented data,
-labelled as such on every page. Claude Code wrote the code.
+of HTML, CSS and JavaScript, and 675 tests that run offline in a few seconds. It is hosted over
+HTTPS, because a browser labels a person's click only on HTTPS pages, so a judge can try it
+without installing anything. The public repository holds no Qloo response data, as Qloo's
+developer guide asks: its tests and its keyless mode use invented data, labelled on every page.
+Claude Code wrote the code.
 
 What the planner does, measured on the synthetic sample (invented performers, so the counts show
 the planner and say nothing about Qloo's data): for The Lantern Room, four acts and three open
 nights, a plan spends 12 of the programme's 16 calls (four searches, one tag lookup, three wide
 calls and four trend checks), stops because four candidates are ready for three nights, and says
-that eight further trend checks were not needed. The live counts are measured on the first live
-run (pending).
+that eight further trend checks were not needed. No live run has happened, so there are no live
+counts.
 
-**Not done yet, stated so the copy cannot be read as more:** no call has been made to Qloo, so
-every response shape in the code is the documented one, marked unverified, and the live
-calibration (a short run that checks those shapes) has not happened; no real MCP client has been
-run against the endpoint or the relay, only a client written for the tests from the specification's
-own text; the hosted demo is not deployed.
+**What this build has not done:** the Qloo API key requested on 17 Oct had not reached this build
+when it was published, so the app runs on its labelled synthetic sample data and has made no call
+to Qloo; every response shape in the code is the documented one, marked unverified. The live
+provider and its key-day probe are in the code. No real MCP client has been run against the
+endpoint or the relay; the tests use a client written from the specification.
 
 ### Challenges we ran into
 
 - **Telling a person's click from an agent's call.** Over HTTP both are requests. The page
   therefore acts as the person only when the browser labels the request `Sec-Fetch-Site:
   same-origin`, a header page script cannot set, and browsers send it only on HTTPS pages and on
-  `localhost`. Walked in a real browser, a plain-HTTP address kept no cookie and had its POST
-  refused, so no Confirm button could exist there. The page says why in a banner, and every hosted
-  copy has to be HTTPS.
+  `localhost`. On plain HTTP no Confirm button can work, so the page says why in a banner, and
+  every hosted copy has to be HTTPS.
 - **Qloo ignoring a parameter it does not know,** without an error. Every request is built from a
   per-type allowlist and a test refuses anything else.
 - **Testing realistic shapes without Qloo data in a public repository.** The fixtures are
   invented performers with ids in a reserved range, and a test fails if any other id-shaped string
   appears anywhere in the tree.
-- **MCP moved while this was built.** One endpoint now serves two eras, written from the
-  specification pages as raw text: the stateless 2026-07-28 revision (headers that must match the
-  body, no handshake) and the older `initialize` handshake. The stdio transport of the new revision
-  has no header layer, so the relay rebuilds the headers from each message.
+- **MCP moved while this was built.** One endpoint serves both the stateless 2026-07-28 revision
+  and the older `initialize` handshake, and the stdio relay rebuilds the new revision's headers
+  from each message, because its stdio transport has no header layer.
 - **Free hosts forget.** A free web service sleeps after 15 minutes without traffic and its
-  in-memory workspaces go with it, so the copy says what a visitor sees after a cold start: a wait
-  of up to a minute, then an empty workspace. On Amazon Linux 2023 the system `python3` is 3.9 for
-  the life of the release, and Caddy gives a bare IP address only a certificate from its own local
-  authority, which no judge's browser trusts, so the EC2 option installs Python 3.13 beside it and
-  uses an `sslip.io` name.
+  in-memory workspaces go with it, so the copy says what a visitor sees after a cold start. Caddy
+  gives a bare IP only a certificate no browser trusts, so the EC2 option uses an `sslip.io` name.
 
 ### Accomplishments that we're proud of
 
 - The gate is structural and tested. The five human-only verbs are absent from the registry,
-  from `GET /api/tools`, from the agent address and from the MCP tool list; the chokepoint
-  refuses them for the agent even when called directly; and the stdio relay, which judges nothing
-  itself, passes the same refusal through in both MCP eras.
+  `GET /api/tools`, the agent address and the MCP tool list, and the chokepoint refuses them for
+  the agent even when called directly, in both MCP eras.
 - Every figure on a card says whose it is: Qloo's, or this app's rule.
 - The page runs from a keyboard alone, at 375 px, in light and dark, and has a sentence for every
   state: a name with several matches, no match, the cap reached, the daily ceiling spent, Qloo
@@ -194,27 +195,36 @@ own text; the hosted demo is not deployed.
 
 ### What's next for Open Slot
 
-- Compare any candidate's audience against the room's, using Qloo's analysis endpoint.
-- Show a taste profile of the room from Qloo tags beside the candidates.
-- A support-act mode: given a confirmed headliner, find openers with overlapping audiences below it.
+The venue pays: the programmer or talent buyer of an independent room, a theatre or a campus
+board, the person this app is built around. The wedge is the dark weeknight, a Tuesday with nothing
+on, where a comedy night or a podcast taping is a booking that a list of similar bands does not
+suggest. Our working assumption on price, not yet tested with any buyer, is a flat US$49 a month
+per room. Next come a support-act mode, which finds openers below a confirmed headliner whose
+audiences overlap it, and a taste profile of the room from Qloo tags, shown beside the candidates.
+
+After those, a comparison of any candidate's audience with the room's, through Qloo's analysis
+endpoint.
 
 ## Built with
 
-python, html, css, javascript, model-context-protocol, qloo, render (pending: amazon-ec2 and caddy instead, if the deploy sitting chooses EC2)
+python, html, css, javascript, model-context-protocol, qloo, <!-- host: render|ec2 -->
+
+(The host marker becomes `render`, or `amazon-ec2, caddy`, whichever the demo is hosted on.)
 
 ## Try it out links
 
-- The hosted demo (pending: the address lands after the deploy sitting on 23 Oct; the live demo goes first)
-- The public repository, `github.com/guptachetan1995/open-slot` (pending until it is published on 23 Oct)
+- <!-- hosted-url --> (the hosted demo; it goes first)
+- https://github.com/guptachetan1995/open-slot (the public repository)
 
 ## Video demo link
 
-None unless the optional video is made (pending, decided on 27 Oct). The rules do not ask for one.
+<!-- video-url: the YouTube link if the optional video is uploaded, else leave the field empty -->
+The rules do not ask for a video.
 
 ## Image gallery (planned captions)
 
-All images are real frames of the hosted demo, with no key, cookie or agent address on screen, and
-no Qloo logo. Qloo data in them appears on this page only, never in the repository.
+All images are real frames of the app running on its synthetic sample data, with the sample-data
+banner visible, no key, cookie or agent address on screen, and no Qloo logo.
 
 1. **Thumbnail (3:2):** the board: the open nights on one side, ready candidates with their
    evidence on the other.
@@ -232,8 +242,8 @@ no Qloo logo. Qloo data in them appears on this page only, never in the reposito
 
 | Field (expected) | Draft answer |
 |---|---|
-| Link to a functional demo application | The hosted demo address (pending: 23 Oct) |
-| Public code repository URL | `github.com/guptachetan1995/open-slot` (pending until published on 23 Oct). Public, with the MIT licence visible in the About panel |
+| Link to a functional demo application | <!-- hosted-url --> |
+| Public code repository URL | https://github.com/guptachetan1995/open-slot, public since 19 Oct 2026, with the MIT licence visible in the About panel |
 | Platform | A web app, in any current browser, on a phone or a desktop |
 | Testing instructions | See [Testing instructions](#testing-instructions) below |
 | New or existing project | New. Planning notes were written on 7 Oct. All application code was written from 19 Oct 2026, inside the Submission Period |
@@ -242,25 +252,26 @@ no Qloo logo. Qloo data in them appears on this page only, never in the reposito
 
 The rules require access "free of charge and without any restriction". Open Slot is a web app.
 
-1. **No login, no key, nothing to install.** Open the demo address in a current Chrome, Firefox or
-   Safari. The free host sleeps after 15 minutes without traffic, so the first load can take about
-   a minute (on Render, the host shows its own loading page while it wakes), and a workspace does
+1. **No login, no key, nothing to install.** Open <!-- hosted-url --> in a current Chrome,
+   Firefox or Safari. On a free host that sleeps after 15 minutes without traffic, the first load
+   can take up to a minute (Render shows its own loading page while it wakes), and a workspace does
    not survive the sleep: after the wait the page is empty and **Try the sample programme** starts
-   again. A page loaded over
-   plain HTTP, or a browser that sends no request label (older than 2023, or behind a proxy or
-   privacy tool that strips it), shows a banner and cannot confirm, assign or approve, because the
-   page tells you apart from an agent by that label; the agent console and an MCP client still
-   work. Click
-   **Try the sample programme** and follow the path in the README's demo section: confirm the acts,
-   run the agent, open a card, propose and assign a night, draft, name the sender and approve an
-   inquiry, then try `approve_inquiry` in the agent console.
-2. **What the demo calls.** It makes live Qloo calls from the server. A programme has a call cap
-   (16 by default; the Raise cap button takes it to 40), and the server has a daily ceiling that
-   guards the key. These are abuse guards, not a login or a paywall. The ceiling and the agent's
-   allowance live in the server's memory, so they bound one run of the server and not a calendar
-   day, and they restart when the free host wakes from sleep. If the ceiling is ever spent, the
-   page says so in a banner and offers synthetic sample data, which is labelled as such. Type
-   public performers, podcasts or shows only: each name is sent to Qloo.
+   again. A page loaded over plain HTTP, or a browser that sends no request label (older than 2023,
+   or behind a proxy or privacy tool that strips it), shows a banner and cannot confirm, assign or
+   approve, because the page tells you apart from an agent by that label; the agent console and an
+   MCP client still work. Click **Try the sample programme**, then: confirm the acts, run the agent,
+   open a card, propose and assign a night, draft, name the sender and approve an inquiry, then try
+   `approve_inquiry` in the agent console.
+2. **What the demo runs on.** A banner on every page names the mode. The hosted demo serves
+   synthetic sample data, invented performers through the real planner, tools and human gate,
+   because the Qloo API key had not reached this build; with a key set on the host, the same server
+   calls Qloo live. A programme has a call cap (16 by default; **Raise the call cap** takes it to
+   40), and a live server has a daily ceiling that guards the key. These are abuse guards, not a
+   login or a paywall. The ceiling and the agent's allowance live in the server's memory, so they
+   bound one run of the server and not a calendar day, and they restart when a free host wakes from
+   sleep. If the ceiling is ever spent, the page says so in a banner and serves synthetic sample
+   data, labelled as such. Type public performers, podcasts or shows only: with a key set, each name
+   is sent to Qloo.
 3. **Locally, with no key:** clone the repository and run `python3 -m open_slot serve` (Python 3.11
    or newer, nothing to install). It runs on synthetic data and says so.
 4. **Locally, live, with your own key:** put your Qloo hackathon key in `QLOO_API_KEY` and run the
@@ -271,10 +282,10 @@ The rules require access "free of charge and without any restriction". Open Slot
    `claude mcp add --transport http open-slot <agent address>/mcp`), and one that only speaks stdio
    can run `python3 -m open_slot mcp --address <agent address>` from a clone. The human verbs are
    not in the tool list, and asking for one returns `not_a_tool`. No real MCP client has been run
-   against either yet; if one has by the time of submission, this line says which.
+   against either yet; the tests drive both with a client written from the specification's text.
 
 The hosted demo and the repository stay up through at least 18 Nov 2026, past the end of the
-judging period. After that the demo's banner says if Qloo's key has been deactivated.
+judging period.
 
 ## YouTube upload details (conditional; sent with the video file)
 
@@ -290,17 +301,17 @@ Only if the optional video is made.
 
 ## Judging criteria — where to look
 
-| Criterion (Official Rules §6) | Where the evidence will be |
+| Criterion (Official Rules §6) | Where the evidence is |
 |---|---|
 | Technological Implementation | The README's "Where Qloo comes in" table. The parameter allowlist and its tests. The trace and call strip on the demo page. The planner's calls spent and saved. The caps, the allowance and the ceiling. The gate tests |
 | Design | The demo's single flow from room to approved inquiry, every state reachable (no key, ambiguous name, nothing found, cap reached, host asleep). The page at phone width. Keyboard operation and the palette's contrast test |
-| Potential Impact | [What it does](#what-it-does) and the demo run on live data. The one irreversible act, sending an inquiry in the room's name, is the human's |
+| Potential Impact | [What it does](#what-it-does), including what bookers use today, and the sample programme on the demo. The one irreversible act, sending an inquiry in the room's name, is the human's |
 | Quality of the Idea | Live acts across domains for a room's regulars. Reach read from the room's own acts. Direction spent only where it matters. Evidence with a source on every figure. Two human gates that follow Qloo's own guidance |
 
 ## What this entry does not claim
 
-- **No language model inside the app.** The agent is a deterministic planner. Any model can drive
-  the same tools over MCP.
+- **No language model bundled.** The agent is an auditable planner of written rules. Any model
+  that speaks MCP can drive the same tools, and none can commit through them.
 - **No sales forecast.** Qloo reports audience overlap, popularity and trend, not tickets.
 - **No price.** Popularity is Qloo's percentile, used as a stand-in for "in reach".
 - **No assessment of any performer.** Qloo's figures describe how audiences overlap; they are not an assessment of any performer, and no card combines them into a rating of one.
@@ -313,11 +324,11 @@ Only if the optional video is made.
 - **No real venue or programmer.** The room and the person are fictional. The performers are
   real public acts that Qloo resolves, shown only through what Qloo returns, with no endorsement.
 - **No Qloo data in the repository.** Tests and the keyless mode use synthetic, invented data.
-- **Nothing here has been run against live Qloo yet.** Until the first live run, every response
-  shape in the code is the documented one, marked unverified. This line goes in the same change as
-  the calibration.
+- **No live Qloo run.** The Qloo API key requested on 17 Oct had not reached this build when it
+  was published, so every response shape in the code is the documented one, marked unverified, and
+  the demo runs on labelled synthetic sample data.
 - **No claim of a tested MCP client.** The endpoint and the stdio relay are tested with a client
-  written for the tests; a real client's session is pending and is not described as done.
+  written for the tests; no real client's session has been recorded.
 - **No persistence.** The hosted demo keeps a workspace in memory only. It is forgotten after two hours
   of inactivity, and sooner on a free host that sleeps: Render's free tier spins a service down after
   15 minutes without traffic and the memory goes with the process. After that a visitor waits up to a
@@ -349,20 +360,14 @@ Only if the optional video is made.
 - reads the live submission form and updates this file to match;
 - fills every Devpost field from this file, including links, gallery, thumbnail and built-with
   tags;
-- turns the repository name above into a full link, and the testing instructions into the live
-  address, once both exist;
+- fills each hosted-address marker in this file and in the README with the demo's address;
 - runs the judge-panel review and fixes what it finds;
 - verifies every checklist line against the live draft, the live demo and the public repository.
 
 **Owner:**
-1. Ticks the agreement boxes, solves any captcha and clicks **Register** and the key form's
-   **Submit** (8 Oct); creates the Render account, clicks **Create** on the throwaway Render
-   deploy and **Launch instance** on a throwaway EC2 instance on the existing AWS account (no new
-   account) that test the hosting, and deletes both afterwards (8 Oct, one sitting of about 50
-   minutes). A Vercel account is created only if both of those fail.
-2. Pastes the API key into a key file, and into the host's `QLOO_API_KEY` field when creating the
-   service, or into the one marked line of the EC2 boot script (by 19 Oct and 23 Oct). The guide
-   for both sittings is `docs/deploy.md` in the repository.
-3. Uploads the video to YouTube as **Public** and pastes the link, only if the video is made
-   (27 Oct).
-4. Ticks the agreement boxes and clicks **Submit** (28 Oct).
+1. Ticked the agreement boxes and clicked **Register** and the key form's **Submit** (done, 17 Oct).
+2. In the deploy sitting, creates the host's account if it needs one and clicks the host's create
+   button (Render's **Create Web Service**, or **Launch instance** on EC2); types the Qloo key into
+   the host only if one has arrived. The guide is `docs/deploy.md` in the repository.
+3. Uploads the video to YouTube as **Public** and pastes the link, only if the video is made.
+4. Ticks the agreement boxes and clicks **Submit**, before Sat 31 Oct 2026, 09:15 IST.

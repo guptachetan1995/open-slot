@@ -1,3 +1,4 @@
+import copy
 import json
 import re
 import secrets
@@ -119,6 +120,7 @@ def hostile(marker, status=None, where=lambda request: True):
                 "X-Debug": key}
         code, body, headers = serve_fake(request)
         if code == 200:
+            body = copy.deepcopy(body)
             results = body["results"]
             rows = results if isinstance(results, list) else next(iter(results.values()))
             for row in rows:

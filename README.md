@@ -8,34 +8,31 @@ Open Slot is an independent entry to the
 [Qloo Agentic Hackathon](https://qloo.devpost.com/) ("Agents, but with taste").
 It is not affiliated with or endorsed by Qloo.
 
-**Status: in build.** The app is complete on synthetic data and has not run against Qloo. No Qloo
-key had arrived when this was written, so every response shape in the code is the documented one,
-marked unverified, and the live calibration (a short run with the key to check those shapes) has
-not been done. What exists and is tested offline: the request builders and response readers for
-Qloo's four endpoints, the room's range, the trend and status rules, slot proposals, the inquiry
-template, the store, a provider of invented performers, the live provider (a private cache, a
-ledger of live calls, bounded retries, the programme's cap, the agent's daily allowance and the
-server's daily ceiling), the one chokepoint every call goes through, the agent's ten tools, the
-five human-only verbs, the planner, `plan` and `budget` on the command line, the code of the
-first-day probe, the server (the workspace cookie, the per-route guards and limits, the agent
-address, a lock for each workspace, a cap on handler threads) with its MCP endpoint, and the page:
-the room form, confirming the matches, running the agent with its trace filling as it goes, the
-evidence cards, the board of nights, drafts and their approval, the agent console, and a banner for
-every state. Also written and checked offline, but not yet run anywhere: the stdio relay
-(`python3 -m open_slot mcp`) and the deploy files for two hosts ([docs/deploy.md](docs/deploy.md)).
-What is still to come, before the hackathon's build window ends on 30 October 2026 at 11:45 pm
-Eastern time (31 October, 09:15 IST):
-- the hosted demo, whose address will be written here when it exists;
-- the first run against Qloo with a real key, and with it the check of every response shape;
-- a session with a real MCP client against the agent address;
-- the final copy.
+**Hosted demo:** <!-- hosted-url -->
 
-**Hosted demo:** pending the deploy. Open the address in a current Chrome, Firefox or Safari. On the
-free host the first load after 15 minutes without traffic takes up to a minute, and the workspace
-is empty after that wait.
+Click **Try the sample programme**, confirm the acts, click **Run the agent**, open any card. Use a
+current Chrome, Firefox or Safari. If the host has been asleep, the first load takes up to a minute.
 
-The [build log](#build-log) records each stage as it lands. The sections below describe what the
-app does; the ones that are still to come say so.
+![The board of open nights: the agent proposed a band, a comedian and a podcast, and the person assigned the first night; nothing is booked. Synthetic sample data.](docs/img/nights-board.png)
+
+**The sample programme.** The Lantern Room (fictional, 300 seats) has three dark Tuesdays in
+November. Four acts have sold it: The Milk Carton Kids, Alvvays, Maria Bamford and Judge John
+Hodgman, which is two bands, a stand-up and a podcast. Its regulars are not one genre, so the next
+act for a dark Tuesday need not be a band. Anchored on all four, the agent proposes a music act
+for Tue 3 Nov, a comedian for Tue 10 Nov and a podcast for Tue 17 Nov, and the comedian's card
+shows an audience that connects to Maria Bamford, Judge John Hodgman and Alvvays. This build runs
+on labelled synthetic sample data, so those three candidates and their scores are invented; the
+planner, the cards and the human gate are the same code that runs on Qloo's answers once a key is
+set.
+
+**Where each judging criterion is answered**
+
+| Criterion | Where to look |
+|---|---|
+| Technological Implementation | [Where Qloo comes in](#where-qloo-comes-in): four endpoints, the parameters sent and a redacted request. The parameter allowlist per endpoint and per entity type in `open_slot/qloo.py`, the planner's funnel and stop rule in `open_slot/planner.py`, the one chokepoint in `open_slot/invoke.py`, and 675 tests in `tests/` that run offline |
+| Design | One flow from the room to an approved inquiry, and [a screen for every unusual state](#what-the-page-shows-when-something-is-not-the-usual-case); the page is `web/` |
+| Potential Impact | [The problem](#the-problem), [what bookers use today](#what-bookers-use-today) and [what it can't tell you](#what-it-cant-tell-you) |
+| Quality of the Idea | [How it works](#how-it-works): comedians and podcasts for a band's room, reach read from the room's own acts, and a trend check only where it can change the answer. [Who may do what](#what-the-agent-does-what-only-a-human-does) |
 
 ## The problem
 
@@ -56,7 +53,31 @@ taste graph and keeps every number labelled with where it came from.
 Open Slot never contacts anyone. An inquiry to an act's management is a message sent in your name,
 so only you can approve it.
 
+## What bookers use today
+
+Three tools sit near this job. Each is described here only by its maker's own page:
+
+- **Opendate's Smart Suggestions** ([announced 1 Sep 2026](https://www.opendate.io/post/artist-discovery-smart-suggestions))
+  gives a venue "a ranked list of artists who've drawn well at venues comparable to yours",
+  filtered to artists "whose average draw actually fits your room", built from the venue's own
+  booking calendar and settled ticket history.
+- **Chartmetric's Neighbor Artists** ([Chartmetric's post](https://hmc.chartmetric.com/new-features-cities-page-neighbor-artists-instagram-follower-demographics-amazon-music/))
+  lists the artists whose numbers sit near a chosen artist's: Spotify monthly listeners, popularity
+  and followers, or Deezer fans.
+- **Booking-Agent.io** ([its site](https://booking-agent.io/)) works from the act's side. It calls
+  itself "The music industry's search engine for venue contacts and talent buyers", built for
+  touring artists, managers and booking agents.
+
+Each of those pages describes artists and artists' numbers; none describes finding a comedian or
+a podcast whose audience overlaps a band's. That is Open Slot's question: which musicians,
+comedians and podcasts share a room's audiences, as Qloo's graph measures it across those domains,
+whether each is within the room's reach, and which way it is trending, with every figure showing
+whether it is Qloo's or this app's rule. Draw history is the better evidence of what a night takes
+at the door, and Open Slot has none; the two answer different questions.
+
 ## How it works
+
+![A candidate card: which of your acts it connects to and by how much, popularity against the room's range and the weekly trend, each labelled as Qloo's figure or this app's rule, with no combined score. Synthetic sample data.](docs/img/candidate-card.png)
 
 You describe the room: a label, the open nights, and two to six acts that sold well. Type public
 performers, podcasts or shows only: each name is sent to Qloo to find a match.
@@ -144,10 +165,13 @@ with no key, or when an allowance is spent, the page says so in a banner.
 
 ## What the agent does, what only a human does
 
-The agent is a **deterministic planner**; no language model runs in this app. It calls the same
-tools the page's buttons call, through one `invoke(tool, args, actor)` chokepoint, and every call
-it makes or skips is written to a trace with its reason. Any language-model agent can drive the
-same tools over MCP, and the result is the same: it drafts, and it cannot commit.
+![The agent console sends every call as the agent, through the same chokepoint as the page's buttons; asking for approve_inquiry is refused with not_a_tool. Synthetic sample data.](docs/img/agent-cannot-approve.png)
+
+The agent is an **auditable planner**: each step is a written rule applied to a Qloo response, and
+every call it makes or skips goes into a trace with its reason. It calls the same tools the page's
+buttons call, through one `invoke(tool, args, actor)` chokepoint. Any language model that speaks MCP
+can drive those same tools, and none can commit through them: it can search, plan and draft, and
+the decisions marked **Never** below stay with you.
 
 | | Agent | You |
 |---|---|---|
@@ -209,8 +233,8 @@ run, so the plan is refused until a person confirms the matches.
 
 ## Connect your own agent
 
-The page shows its holder an agent address, `https://<demo address>/agent/<token>`, where `<token>`
-is 32 random hex characters (open "Connect your own agent" on the page; a local server's is
+The page shows its holder an agent address, `<!-- hosted-url -->/agent/<token>` on the hosted
+demo, where `<token>` is 32 random hex characters (open "Connect your own agent" on the page; a local server's is
 `http://127.0.0.1:8760/agent/<token>`). It reaches only that workspace, always acts as the agent,
 and the token travels only in the path. The MCP endpoint is `<agent address>/mcp`; with Claude Code:
 `claude mcp add --transport http open-slot <agent address>/mcp`. A client that only speaks stdio uses
@@ -230,7 +254,7 @@ stream (`GET` and `DELETE` are 405; an `Mcp-Session-Id` header is ignored and ne
   answered with 2025-11-25.
 
 ```sh
-AGENT=https://<demo address>/agent/<token>
+AGENT=<!-- hosted-url -->/agent/<token>
 
 # 2026-07-28: one request, no handshake
 curl -s "$AGENT/mcp" -H 'Content-Type: application/json' \
@@ -260,8 +284,9 @@ so an agent can read it and correct itself. Nothing in the request, not the cook
 `python3 -m open_slot mcp --address <agent address>` reads one JSON-RPC message per line on stdin,
 posts each to `<agent address>/mcp` and writes each answer as one line on stdout, as the stdio
 transport of both eras describes. It exits 0 when stdin ends, and logs only to stderr. The address
-is `https://<demo address>/agent/<token>`, or `http://127.0.0.1:<port>/agent/<token>` for a local
-server; anything else is refused, because the token is in the path. The relay judges nothing itself:
+is the hosted demo's, `<!-- hosted-url -->/agent/<token>`, or `http://127.0.0.1:<port>/agent/<token>`
+for a local server; one that is neither HTTPS nor loopback is refused, because the token is in the
+path. The relay judges nothing itself:
 whatever the address answers is what the client reads, so a human verb is refused in either era.
 
 - A 2026-07-28 message carries its version in `_meta` and the stdio transport has no header layer,
@@ -279,7 +304,7 @@ that `-m open_slot` is found (or start the command from inside it):
 ```json
 {"mcpServers": {"open-slot": {
   "command": "python3",
-  "args": ["-m", "open_slot", "mcp", "--address", "https://<demo address>/agent/<token>"],
+  "args": ["-m", "open_slot", "mcp", "--address", "<!-- hosted-url -->/agent/<token>"],
   "env": {"PYTHONPATH": "/path/to/open-slot"}}}}
 ```
 
@@ -297,9 +322,10 @@ A banner on every page shows the active mode.
 
 - **Live:** real Qloo calls from the server, with the key in an environment variable, a local
   `.env`, or a key file you point at with `OPEN_SLOT_ENV_FILE`. The key stays on the server; it is
-  never sent to the browser, never in a URL and never logged. This is the mode of the hosted demo.
+  never sent to the browser, never in a URL and never logged.
 - **Synthetic** (the default with no key): invented performers and invented Qloo-shaped
-  responses, for the tests and for running the app from a fresh clone. The banner reads "Synthetic
+  responses, for the tests, for running the app from a fresh clone, and for the hosted demo while
+  its host has no key. The banner reads "Synthetic
   sample data. Qloo is not being called." and, when no key is set, adds "No Qloo key is set on this
   server." It is never passed off as real.
 - **Daily allowance spent:** a live server whose ceiling of live calls for the day is used up keeps
@@ -370,7 +396,7 @@ workspace".
 
 ## What this entry does not claim
 
-- No language model runs inside the app.
+- No language model is bundled. The planner is rules; a model comes in only as a client over MCP.
 - No act is shown as booked, available or interested.
 - Popularity is Qloo's percentile, used as a stand-in for "in reach". It is not a price.
 - The venue, the programmer and the room are fictional. The performers are real public acts that
@@ -427,8 +453,8 @@ proxy's: the person gate needs it.
   for `<ip with dashes>.sslip.io`. The Qloo key is typed on one marked line of that script, which
   the repository keeps empty. The instance never sleeps and is never stopped.
 
-Neither has been deployed yet. The tests parse both and load their settings through the server's
-own configuration, which proves they agree with the code and nothing about the hosts themselves.
+The tests parse both and load their settings through the server's own configuration, which proves
+they agree with the code and nothing about the hosts themselves.
 
 With your own Qloo key, `python3 -m open_slot probe --name … --name … --name …` checks the response
 shapes the app relies on and prints shapes, counts and status codes only, never a value or the key.
@@ -437,6 +463,9 @@ shapes the app relies on and prints shapes, counts and status codes only, never 
 submission notes, then compiles the package and runs the offline tests.
 
 ## Build log
+
+The Qloo API key requested on 17 Oct had not reached this build when it was published, so the app
+runs on its labelled synthetic sample data. The live provider and its key-day probe are in the code.
 
 Each row gets its real date as the work lands.
 
@@ -448,8 +477,9 @@ Each row gets its real date as the work lands.
 | 20 Oct | The server, the first version of the page (room form, confirm, run, cards) and the hosted MCP endpoint, which speaks both eras of MCP. Not run against Qloo: no key yet | Done |
 | 20 Oct | The board of nights, drafts and approval, the agent console, the live trace, every banner state and the accessibility pass; a lock for each workspace and a cap on threads; a synthetic provider for a spent ceiling. Walked in a real browser (keyboard only, 375 px, dark mode, plain HTTP, no request label, spent ceiling, cap reached, a Qloo error). Live calibration not done: no key | Done |
 | 20 Oct | The stdio relay (`python3 -m open_slot mcp`), the deploy files for Render and for EC2 behind Caddy, and the guide to deploying them. Checked offline only | Done |
-| 23 Oct | The hosted demo | Planned |
-| 24 – 28 Oct | A real MCP client session, the final copy | Planned |
+| 30 Oct | The copy, revised after an independent review against the judging criteria | Done |
+| 30 Oct | The hosted demo, on the synthetic sample data. Its deploy sitting is on 30 Oct; the **Hosted demo** line at the top of this README carries the address when there is one | Not done as of the morning of 30 Oct |
+| 30 Oct | A session with a real MCP client against the agent address | Not done as of 30 Oct |
 
 ## License
 

@@ -32,7 +32,8 @@ class Drafts(unittest.TestCase):
         self.assertEqual((self.draft["approvedBy"], self.draft["approvedAt"]), (None, None))
 
     def test_the_template_is_filled_from_the_programme_and_the_card(self):
-        self.assertEqual(self.draft["text"], (
+        live = inquiry.draft({**self.found, "provider": "live"}, ACT, "d1")
+        self.assertEqual(live["text"], (
             "DRAFT. Not approved. Do not send.\n"
             "Hello. I program The Lantern Room (fictional), 300 seats. Some of our audience's favourites are "
             "Resolved Folk Duo, Resolved Indie Band, Resolved Stand-Up and Resolved Live Podcast. "
@@ -43,6 +44,11 @@ class Drafts(unittest.TestCase):
             "No offer is made by this message.\n"
             "[sender name needed]"
         ))
+
+    def test_a_programme_on_sample_data_never_credits_qloo_for_the_link(self):
+        sample = "Sample taste data, standing in for Qloo's, connects Marlow Hour with "
+        self.assertIn(sample, self.draft["text"])
+        self.assertNotIn("Qloo's taste data", self.draft["text"])
 
     def test_it_stays_within_the_word_limit_for_the_sample_programme(self):
         self.assertLessEqual(inquiry.words(self.draft["text"]), inquiry.MAX_WORDS)
@@ -64,10 +70,10 @@ class Drafts(unittest.TestCase):
 
     def test_the_evidence_sentence_is_dropped_when_asked_or_when_there_are_no_links(self):
         off = inquiry.draft(self.found, ACT, "d1", evidence=False)
-        self.assertNotIn("Qloo's taste data", off["text"])
+        self.assertNotIn("taste data", off["text"])
         self.assertFalse(off["snapshot"]["evidence"])
         found = with_candidate(self.found, links=())
-        self.assertNotIn("Qloo's taste data", inquiry.draft(found, ACT, "d1")["text"])
+        self.assertNotIn("taste data", inquiry.draft(found, ACT, "d1")["text"])
 
     def test_the_evidence_names_only_the_anchors_the_candidate_links_to_by_their_resolved_names(self):
         self.assertEqual(self.draft["snapshot"]["links"],

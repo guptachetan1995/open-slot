@@ -50,7 +50,7 @@ The labels are the ones Render's own pages use.
 
 | Field | Value |
 |---|---|
-| Name | `open-slot` |
+| Name | `open-slot-qloo` |
 | Language | `Python 3` |
 | Branch | `main` |
 | Region | `Oregon (US West)`, the form's default; a region cannot be changed after creation |
@@ -77,6 +77,9 @@ service's `onrender.com` name, and the server reads it, so nobody has to guess t
 **Create**), `OPEN_SLOT_PORT`, and `PYTHON_VERSION`.
 
 Why these values:
+- **Name `open-slot-qloo`.** `open-slot.onrender.com` already belongs to an unrelated app, so the plain
+  name would send a judge who guesses the address to the wrong product. The address becomes
+  `https://open-slot-qloo.onrender.com`, or carries a suffix if that is taken; the service page shows it.
 - **Python.** The app needs 3.11 or newer. The repository's `.python-version` reads `3.13`, and
   Render uses it (a `PYTHON_VERSION` variable would override it, so none is set); without it a
   service created today gets 3.14.8, which also runs the app. The deploy log should name the version.

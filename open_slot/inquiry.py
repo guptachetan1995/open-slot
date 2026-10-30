@@ -10,6 +10,11 @@ DRAFT_LINE = "DRAFT. Not approved. Do not send."
 SENDER_NEEDED = "[sender name needed]"
 MAX_WORDS = 120
 SENDER_MAX = 60
+# A programme on synthetic sample data never credits Qloo for the link it states.
+EVIDENCE_SOURCE = {
+    "live": "Qloo's taste data, which we use to find acts,",
+    "fake": "Sample taste data, standing in for Qloo's,",
+}
 
 
 def _join(names):
@@ -23,7 +28,7 @@ def render(snapshot, sender=None):
     capacity = f", {snapshot['capacityNote']}" if snapshot["capacityNote"] else ""
     evidence = ""
     if snapshot["evidence"]:
-        evidence = (f" Qloo's taste data, which we use to find acts, connects {snapshot['act']} "
+        evidence = (f" {EVIDENCE_SOURCE[snapshot['provider']]} connects {snapshot['act']} "
                     f"with {_join(snapshot['links'])}.")
     body = (
         f"Hello. I program {snapshot['label']}{capacity}. "
@@ -62,6 +67,7 @@ def draft(found, entity_id, draft_id, night_ids=None, evidence=True):
         "act": candidate["name"],
         "links": [resolved[link["anchor"]] for link in candidate["links"]],
         "evidence": evidence and bool(candidate["links"]),
+        "provider": found["provider"],
     }
     if words(render(snapshot)) > MAX_WORDS:
         snapshot["evidence"] = False

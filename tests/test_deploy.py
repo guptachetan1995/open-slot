@@ -219,7 +219,7 @@ class TheRenderValues(unittest.TestCase):
         self.assertEqual(form["Build Command"], "true")
         self.assertEqual(form["Branch"], "main")
         self.assertEqual(form["Root Directory"], "empty")
-        self.assertEqual(form["Name"], "open-slot")
+        self.assertEqual(form["Name"], "open-slot-qloo")
         self.assertEqual(form["Health Check Path (Advanced)"], "/healthz")
         self.assertTrue(form["Auto-Deploy"].startswith("On Commit"))
         app = server.App(settings(), None)
